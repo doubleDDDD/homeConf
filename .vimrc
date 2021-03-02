@@ -104,21 +104,21 @@ func SetTitle()
         call append(line("."),"# coding=utf-8")
 	    call append(line(".")+1, "")
 	else 
-		call setline(1, "/*************************************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
-		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
-		call append(line(".")+4, " ************************************************************************/") 
-		call append(line(".")+5, "")
+		"call setline(1, "/*************************************************************************") 
+		"call append(line("."), "	> File Name: ".expand("%")) 
+		"call append(line(".")+1, "	> Author: ") 
+		"call append(line(".")+2, "	> Mail: ") 
+		"call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
+		"call append(line(".")+4, " ************************************************************************/") 
+		"call append(line(".")+5, "")
 	endif
 	if expand("%:e") == 'cpp' || expand("%:e") == "cc"
-		call append(line(".")+6, "#include<iostream>")
+		call append(line(".")+6, "#include <iostream>")
 		call append(line(".")+7, "using namespace std;")
 		call append(line(".")+8, "")    
     endif
 	if expand("%:e") == 'c'
-		call append(line(".")+6, "#include<stdio.h>")
+		call append(line(".")+6, "#include <stdio.h>")
 		call append(line(".")+7, "")
 	endif
 	if expand("%:e") == 'h'
